@@ -5,6 +5,6 @@ This is my personal website, where I showcase my projects, skills, and passion f
 
 Feel free to explore, play around, and get in touch! Whether you're a fellow developer, a recruiter, or just a gaming enthusiast, I’d love to connect.
 
-🔗 [Your Website URL]
+🔗 https://jhutus.github.io/gamedev.portfolio/
 
 Let me know if you want to tweak the tone or add something extra. 😊
