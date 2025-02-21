@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #001825;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 15%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #001825;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+header .menu-btn {
+    background-color: #ffffff;
+    color: #001825;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header .menu-btn:hover {
+    background-color: #e6e6e6;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 15%;
+    background-color: #001825;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    padding: 100px 15%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .content {
+    text-align: center;
+}
+
+section img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+#projects .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    position: relative;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+footer {
+    margin-bottom: 20px;
+}

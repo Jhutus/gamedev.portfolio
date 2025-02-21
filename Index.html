@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <button class="menu-btn">Menu</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-me">
+        <div class="content">
+            <img src="images/Perfil.jpg" alt="Your Photo">
+            <p>
+                Write something about yourself here. This section is vertically and horizontally centered.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="content">
+            <h2>My Projects</h2>
+            <div class="grid">
+                <div class="project" onclick="location.href='https://project-link1.com'">
+                    <img src="path-to-project-image1.jpg" alt="Project 1">
+                    <div class="overlay">Project 1</div>
+                </div>
+                <div class="project" onclick="location.href='https://project-link2.com'">
+                    <img src="path-to-project-image2.jpg" alt="Project 2">
+                    <div class="overlay">Project 2</div>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <div class="social-icons">
+                <a href="https://behance.net" target="_blank">Behance</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://itch.io" target="_blank">Itch.io</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+            <p>Feel free to reach out! Here's how you can contact me.</p>
+            <button onclick="location.href='path-to-your-cv.pdf'">Download My CV</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
