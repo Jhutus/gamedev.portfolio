@@ -1,81 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jhutus game dev portfolio</title>
+    <title>Mi Portafolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="header">
-        <button class="nav-btn" onclick="previousSection()">←</button>
-        <h1>jhutus game dev portfolio</h1>
-        <div class="nav-buttons">
-            <button onclick="previousSection()">Previous</button>
-            <button onclick="nextSection()">Next</button>
-        </div>
-    </div>
-    <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-    </div>
+    <header>
+        <h1>Mi Portafolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="about-me" class="section">
-        <div class="section-content">
-            <div class="about-me-content">
-                <img src="images/jhutus_gamedev.jpg" alt="Profile" class="profile-img">
-                <div class="about-text">
-                    <h2>Welcome to My Game Developer Portfolio!</h2>
-                    <p>This is my personal website where I showcase my projects, skills, and passion for game
-                        development.</p>
-                    <p>Here you'll find a collection of my work, including games, prototypes, and interactive
-                        experiences.</p>
-                    <p>Feel free to explore, play around, and get in touch!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="section-content">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <!-- Add more project items as needed -->
-                <div class="project-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <div class="project-info">
-                        <h3>Project 1</h3>
-                        <p>Short description of project 1</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <div class="project-info">
-                        <h3>Project 2</h3>
-                        <p>Short description of project 2</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="section-content">
-            <div class="about-me-content">
-                <h2>Get in Touch</h2>
-                <div class="social-links">
-                    <a href="https://behance.net">Behance</a>
-                    <a href="https://linkedin.com">LinkedIn</a>
-                    <a href="https://itch.io">Itch.io</a>
-                    <a href="https://github.com">GitHub</a>
-                </div>
-                <button class="cv-download">Download CV</button>
-            </div>
-        </div>
-    </section>
-
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Aquí puedes escribir sobre ti.</p>
+        </section>
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <p>Aquí van tus proyectos.</p>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Aquí pones tu información de contacto.</p>
+        </section>
+    </main>
+    
     <script src="script.js"></script>
 </body>
-
 </html>
