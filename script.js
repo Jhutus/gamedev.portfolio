@@ -1,34 +1,40 @@
-// Header hide/show on scroll
-let lastScrollTop = 0;
-const header = document.querySelector('header');
+const sections = document.querySelectorAll('section');
+let currentSection = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > lastScrollTop) {
-        header.style.top = '-100px'; // Hide header
-    } else {
-        header.style.top = '0'; // Show header
-    }
-    lastScrollTop = currentScroll;
-});
-
-// Toggle menu visibility
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-
-menuBtn.addEventListener('click', () => {
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-});
-
-// Smooth scroll to sections
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
+function nextSection() {
+    if (currentSection < sections.length - 1) {
+        currentSection++;
+        const sectionWidth = sections[0].offsetWidth;
+        window.scrollTo({
+            left: currentSection * sectionWidth,
+            behavior: 'smooth'
         });
-        menu.style.display = 'none'; // Hide menu after click
-    });
-});
+        updateProgress();
+    }
+}
+
+function previousSection() {
+    if (currentSection > 0) {
+        currentSection--;
+        const sectionWidth = sections[0].offsetWidth;
+        window.scrollTo({
+            left: currentSection * sectionWidth,
+            behavior: 'smooth'
+        });
+        updateProgress();
+    }
+}
+
+function updateProgress() {
+    const contentWidth = document.querySelector('body').scrollWidth;
+    const viewed = window.scrollX;
+    const width = (viewed / (contentWidth - window.innerWidth)) * 100;
+    document.getElementById('progress').style.width = `${width}%`;
+}
+
+// Actualizar progreso al hacer scroll
+window.addEventListener('scroll', updateProgress);
+
+// Inicializar
+updateProgress();
+

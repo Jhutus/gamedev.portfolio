@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jhutus game dev portfolio</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="header">
         <button class="nav-btn" onclick="previousSection()">←</button>
@@ -27,10 +18,8 @@
                 <img src="images/jhutus_gamedev.jpg" alt="Profile" class="profile-img">
                 <div class="about-text">
                     <h2>Welcome to My Game Developer Portfolio!</h2>
-                    <p>This is my personal website where I showcase my projects, skills, and passion for game
-                        development.</p>
-                    <p>Here you'll find a collection of my work, including games, prototypes, and interactive
-                        experiences.</p>
+                    <p>This is my personal website where I showcase my projects, skills, and passion for game development.</p>
+                    <p>Here you'll find a collection of my work, including games, prototypes, and interactive experiences.</p>
                     <p>Feel free to explore, play around, and get in touch!</p>
                 </div>
             </div>
@@ -62,20 +51,19 @@
 
     <section id="contact" class="section">
         <div class="section-content">
-            <div class="about-me-content">
-                <h2>Get in Touch</h2>
-                <div class="social-links">
-                    <a href="https://behance.net">Behance</a>
-                    <a href="https://linkedin.com">LinkedIn</a>
-                    <a href="https://itch.io">Itch.io</a>
-                    <a href="https://github.com">GitHub</a>
-                </div>
-                <button class="cv-download">Download CV</button>
+            <h2>Get in Touch</h2>
+            <div class="social-links">
+                <a href="https://behance.net">Behance</a>
+                <a href="https://linkedin.com">LinkedIn</a>
+                <a href="https://itch.io">Itch.io</a>
+                <a href="https://github.com">GitHub</a>
             </div>
+            <button class="cv-download">Download CV</button>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+       
+    </script>
 </body>
-
 </html>
