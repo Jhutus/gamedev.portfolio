@@ -1,11 +1,13 @@
 /* Estilos generales */
 body {
     margin: 0;
+    font-family: "Slabo 27px", serif;
+    /*font-family: "Nixie One", serif;*/
     padding: 0;
-    font-family: 'Gabarito', monospace;
-    background-color: #1E1E2E;
+    font-size: 24px;
+    background-color: #100B00;
     /* Azul-morado oscuro */
-    color: #C3E88D;
+    color: #EFFFC8;
     /* Verde neón */
     display: flex;
     flex-direction: column;
@@ -14,37 +16,53 @@ body {
 }
 
 /* Header */
+/* Header */
 header {
-    background-color: #252535;
-    padding: 10px;
+    background-color: #1B170E;
+    padding: 5px 20px; /* Pequeño padding a los lados */
+    font-family: 'JetBrains Mono', monospace;
     text-align: center;
     color: #FFFFFF;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    height: 50px;
+    display: flex;
+    justify-content: space-between; /* Separa el título y el menú */
+    align-items: center; /* Centra verticalmente los elementos */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    margin: 5px 0; /* Reduce el espacio arriba y abajo */
-    padding: 5px 0; /* Reduce el espacio interno */
+header h1 {
+    margin: 0;
+    font-size: 20px; /* Ajusta el tamaño si lo necesitas */
+    color: #85CB33; /* Verde neón */
+    white-space: nowrap; /* Evita que el título se divida en varias líneas */
 }
 
-/* Navegación */
+nav {
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    white-space: nowrap; /* Evita que los enlaces se dividan en varias líneas */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px; /* Reduce el espaciado entre elementos del menú */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #82AAFF;
+    color: #A5CBC3;
+    font-size: 17px;
 }
 
 /* Secciones en horizontal */
@@ -63,34 +81,49 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+/* Estilos para la sección "Sobre mí" */
 #sobre-mi {
+    background-color: #100B00;
     display: flex;
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: center; /* Centra todo en la pantalla */
-    text-align: center;
-    max-width: 800px; /* Ajusta el ancho máximo */
-    margin: 80px auto 0 auto; /* Centra en la página con un margen arriba para no chocar con el menú */
-    padding: 20px;
-    gap: 20px; /* Espacio entre la imagen y el texto */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
 }
 
-#sobre-mi img {
-    width: 200px; /* Ajusta el tamaño de la imagen */
-    height: 200px;
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+.contenido {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    gap: 40px; /* Espacio entre la imagen y el texto */
+    max-width: 1000px; /* Ancho máximo del contenido */
+    padding: 20px; /* Espaciado interno */
+    
 }
 
-#sobre-mi p {
-    color: #FFFFFF;
-    font-size: 16px;
-    max-width: 500px; /* Evita que el texto se expanda demasiado */
+.foto-perfil {
+    width: 250px; /* Tamaño de la imagen */
+    height: 250px;
+    border-radius: 25%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
+
+.descripcion {
+    color: #EFFFC8; /* Color del texto */
+    font-size: 30.5px; /* Tamaño del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin: 0 10px; /* Elimina el margen por defecto del párrafo */
+    text-align: center; /* Justifica el texto */
+    width: 100%; /* Asegura que el texto ocupe todo el espacio disponible */
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra para el texto */
+    
+}
+
+/* Estilos para cada sección */
 
 #proyectos {
-    background-color: #232336;
+    background-color: #0F0A00;
 }
 
 #contacto {
-    background-color: #2A2A3D;
+    background-color: #100B00;
 }
