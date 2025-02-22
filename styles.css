@@ -36,7 +36,7 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    margin: 0px 10px;
     font-size: 20px; /* Ajusta el tamaño si lo necesitas */
     color: #85CB33; /* Verde neón */
     white-space: nowrap; /* Evita que el título se divida en varias líneas */
@@ -56,13 +56,19 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px; /* Reduce el espaciado entre elementos del menú */
+    margin: 0 15px; /* Reduce el espaciado entre elementos del menú */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #A5CBC3;
     font-size: 17px;
+    line-height: 40px; /* Igual a la altura del header */
+}
+
+nav ul li a:hover {
+    color: #eea75b; /* Cambia el color al pasar el mouse */
+    text-shadow: 0 0 5px rgba(239, 163, 82, 0.7); /* Añade un efecto de brillo */
 }
 
 /* Secciones en horizontal */
@@ -83,23 +89,22 @@ section {
 }
 
 /* Estilos para la sección "Sobre mí" */
-#sobre-mi {
+#about-me {
     background-color: #100B00;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
 }
 
-.contenido {
+.content {
     display: flex;
     align-items: center; /* Centra verticalmente la imagen y el texto */
     gap: 40px; /* Espacio entre la imagen y el texto */
     max-width: 1000px; /* Ancho máximo del contenido */
     padding: 20px; /* Espaciado interno */
-    
 }
 
-.foto-perfil {
+.profile-picture {
     width: 250px; /* Tamaño de la imagen */
     height: 250px;
     border-radius: 25%; /* Hace la imagen redonda */
@@ -107,7 +112,7 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
-.descripcion {
+.description {
     color: #EFFFC8; /* Color del texto */
     font-size: 30.5px; /* Tamaño del texto */
     line-height: 1.5; /* Espaciado entre líneas */
@@ -120,10 +125,10 @@ section {
 
 /* Estilos para cada sección */
 
-#proyectos {
+#projects {
     background-color: #0F0A00;
 }
 
-#contacto {
+#contact {
     background-color: #100B00;
 }
