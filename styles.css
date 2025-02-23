@@ -120,15 +120,92 @@ section {
     text-align: center; /* Justifica el texto */
     width: 100%; /* Asegura que el texto ocupe todo el espacio disponible */
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra para el texto */
-    
 }
 
-/* Estilos para cada sección */
-
+/* Estilos para la sección de proyectos */
 #projects {
     background-color: #0F0A00;
+    padding: 20px;
+    text-align: center;
 }
 
+.grid-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 50px; /* Espacio entre proyectos */
+    max-width: 1300px; /* Ancho máximo de la cuadrícula */
+    margin: 0 auto; /* Centrar la cuadrícula */
+}
+
+.projects {
+    background-color: #232336;
+    border-radius: 10px;
+    overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y el texto en una columna */
+}
+
+.proyecto img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+.descriptionbox {
+    padding: 15px;
+    color: #C3E88D;
+    flex-grow: 1; /* El texto ocupa el espacio restante */
+}
+
+.descriptionbox h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.descriptionbox p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #82AAFF;
+}
+
+/* Estilos para la sección de contacto */
 #contact {
     background-color: #100B00;
+    padding: 20px;
+    text-align: center;
 }
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Para que los botones se ajusten en pantallas pequeñas */
+}
+
+.boton-red {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #82AAFF;
+    color: #1E1E2E;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-red i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 20px;
+}
+
+.boton-red:hover {
+    background-color: #C3E88D; /* Cambia el color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de levantar el botón */
+}
+
+.boton-red:active {
+    transform: translateY(0); /* Efecto al hacer clic */
+}
+
