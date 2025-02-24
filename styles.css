@@ -87,6 +87,9 @@ section {
     justify-content: center;
     align-items: center;
 }
+a{
+    text-decoration: none;
+}
 
 /* Estilos para la sección "Sobre mí" */
 #about-me {
@@ -132,13 +135,13 @@ section {
 .grid-projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
-    gap: 50px; /* Espacio entre proyectos */
+    gap: 70px; /* Espacio entre proyectos */
     max-width: 1300px; /* Ancho máximo de la cuadrícula */
     margin: 0 auto; /* Centrar la cuadrícula */
 }
 
 .projects {
-    background-color: #232336;
+    background-color: #1B170E;
     border-radius: 10px;
     overflow: hidden; /* Para que las esquinas redondeadas funcionen */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -146,27 +149,33 @@ section {
     flex-direction: column; /* Coloca la imagen y el texto en una columna */
 }
 
-.proyecto img {
+.projects img {
     width: 100%; /* La imagen ocupa todo el ancho del contenedor */
     height: 200px; /* Altura fija para la imagen */
     object-fit: cover; /* Ajusta la imagen sin distorsionarla */
 }
 
+.projects:hover {
+    transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
+    transition: transform 0.3s ease;
+}
+
 .descriptionbox {
     padding: 15px;
-    color: #C3E88D;
+    color: #EFFFC8;
     flex-grow: 1; /* El texto ocupa el espacio restante */
 }
 
 .descriptionbox h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 28px;
+    text-decoration: none;
 }
 
 .descriptionbox p {
     margin: 10px 0 0;
-    font-size: 14px;
-    color: #82AAFF;
+    font-size: 18px;
+    color: #A5CBC3;
 }
 
 /* Estilos para la sección de contacto */
@@ -179,30 +188,30 @@ section {
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espacio entre los botones */
-    flex-wrap: wrap; /* Para que los botones se ajusten en pantallas pequeñas */
+    gap: 40px; /* Espacio entre los íconos */
+    flex-wrap: wrap; /* Para que los íconos se ajusten en pantallas pequeñas */
 }
 
 .boton-red {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #82AAFF;
-    color: #1E1E2E;
+    justify-content: center;
+    width: 50px; /* Tamaño fijo para los íconos */
+    height: 50px;
+    color: #A5CBC3; /* Color de los íconos */
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 50%; /* Hace que los íconos sean circulares */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .boton-red i {
-    margin-right: 10px; /* Espacio entre el ícono y el texto */
-    font-size: 20px;
+    font-size: 40px; /* Tamaño de los íconos */
 }
 
 .boton-red:hover {
-    background-color: #C3E88D; /* Cambia el color al pasar el mouse */
-    transform: translateY(-3px); /* Efecto de levantar el botón */
+    color: #eea75b; /* Cambia el color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de levantar el ícono */
+    text-shadow: 0 0 5px rgba(239, 163, 82, 0.7);
 }
 
 .boton-red:active {
