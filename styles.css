@@ -2,24 +2,20 @@
 body {
     margin: 0;
     font-family: "Slabo 27px", serif;
-    /*font-family: "Nixie One", serif;*/
     padding: 0;
     font-size: 24px;
     background-color: #100B00;
-    /* Azul-morado oscuro */
     color: #EFFFC8;
-    /* Verde neón */
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh; /* Cambia height a min-height */
     overflow-x: hidden;
 }
 
 /* Header */
-/* Header */
 header {
     background-color: #1B170E;
-    padding: 5px 20px; /* Pequeño padding a los lados */
+    padding: 5px 20px;
     font-family: 'JetBrains Mono', monospace;
     text-align: center;
     color: #FFFFFF;
@@ -29,22 +25,17 @@ header {
     z-index: 1000;
     height: 50px;
     display: flex;
-    justify-content: space-between; /* Separa el título y el menú */
-    align-items: center; /* Centra verticalmente los elementos */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
     margin: 0px 10px;
-    font-size: 20px; /* Ajusta el tamaño si lo necesitas */
-    color: #85CB33; /* Verde neón */
-    white-space: nowrap; /* Evita que el título se divida en varias líneas */
-}
-
-nav {
-    overflow: hidden; /* Oculta el contenido que se desborda */
-    white-space: nowrap; /* Evita que los enlaces se dividan en varias líneas */
+    font-size: 20px;
+    color: #85CB33;
+    white-space: nowrap;
 }
 
 nav ul {
@@ -52,77 +43,76 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
+    justify-content: flex-end;
 }
 
 nav ul li {
-    margin: 0 15px; /* Reduce el espaciado entre elementos del menú */
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #A5CBC3;
     font-size: 17px;
-    line-height: 40px; /* Igual a la altura del header */
+    line-height: 40px;
 }
 
 nav ul li a:hover {
-    color: #eea75b; /* Cambia el color al pasar el mouse */
-    text-shadow: 0 0 5px rgba(239, 163, 82, 0.7); /* Añade un efecto de brillo */
+    color: #eea75b;
+    text-shadow: 0 0 5px rgba(239, 163, 82, 0.7);
 }
 
-/* Secciones en horizontal */
+/* Secciones en vertical */
 main {
-    display: flex;
-    width: 300vw;
-    /* 3 secciones de 100vw cada una */
-    transition: transform 0.5s ease-in-out;
+    display: block; /* Cambia flex a block */
+    width: 100%; /* Cambia 300vw a 100% */
+    margin-top: 50px; /* Ajusta el margen superior para el header fijo */
 }
 
 section {
-    width: 100vw;
-    height: 100vh;
+    width: 100%; /* Cambia 100vw a 100% */
+    min-height: 50vh; /* Cambia height a min-height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Añade padding para mejor espaciado */
 }
+
 a{
     text-decoration: none;
 }
 
 /* Estilos para la sección "Sobre mí" */
 #about-me {
-    background-color: #100B00;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #100B00;    
 }
 
 .content {
     display: flex;
-    align-items: center; /* Centra verticalmente la imagen y el texto */
-    gap: 40px; /* Espacio entre la imagen y el texto */
-    max-width: 1000px; /* Ancho máximo del contenido */
-    padding: 20px; /* Espaciado interno */
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    padding: 40px;
+    margin: 0 auto; /* Centra la sección en la pantalla */
 }
 
 .profile-picture {
-    width: 250px; /* Tamaño de la imagen */
+    width: 250px;
     height: 250px;
-    border-radius: 25%; /* Hace la imagen redonda */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 25%;
+    object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .description {
-    color: #EFFFC8; /* Color del texto */
-    font-size: 30.5px; /* Tamaño del texto */
-    line-height: 1.5; /* Espaciado entre líneas */
-    margin: 0 10px; /* Elimina el margen por defecto del párrafo */
-    text-align: center; /* Justifica el texto */
-    width: 100%; /* Asegura que el texto ocupe todo el espacio disponible */
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra para el texto */
+    color: #EFFFC8;
+    font-size: 30.5px;
+    line-height: 1.5;
+    margin: 0 10px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Estilos para la sección de proyectos */
@@ -130,40 +120,46 @@ a{
     background-color: #0F0A00;
     padding: 20px;
     text-align: center;
+    min-height: auto; /* Elimina el min-height: 100vh */
+    height: auto; /* Ajusta la altura al contenido */
+    max-width: 1200px; /* Limita el ancho máximo de la sección */
+    margin: 0 auto; /* Centra la sección en la pantalla */
+    padding-bottom: 50px; /* Añade espacio en la parte inferior */
 }
 
 .grid-projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
-    gap: 70px; /* Espacio entre proyectos */
-    max-width: 1300px; /* Ancho máximo de la cuadrícula */
-    margin: 0 auto; /* Centrar la cuadrícula */
+    grid-template-columns: repeat(3, 1fr); /* Mantén 3 columnas */
+    gap: 20px; /* Reduce el espacio entre proyectos */
+    max-width: 1000px; /* Limita el ancho máximo de la cuadrícula */
+    margin: 0 auto; /* Centra la cuadrícula */
+    padding: 20px; /* Añade padding para evitar que el contenido toque los bordes */
 }
 
 .projects {
     background-color: #1B170E;
     border-radius: 10px;
-    overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: column; /* Coloca la imagen y el texto en una columna */
+    flex-direction: column;
 }
 
 .projects img {
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: 200px; /* Altura fija para la imagen */
-    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    width: 100%;
+    height: 150px; /* Reduce la altura de las imágenes */
+    object-fit: cover;
 }
 
 .projects:hover {
-    transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
+    transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
 
 .descriptionbox {
     padding: 15px;
     color: #EFFFC8;
-    flex-grow: 1; /* El texto ocupa el espacio restante */
+    flex-grow: 1;
 }
 
 .descriptionbox h3 {
@@ -183,38 +179,40 @@ a{
     background-color: #100B00;
     padding: 20px;
     text-align: center;
+    min-height: 30vh; /* Elimina el min-height: 100vh */
+    height: auto; /* Ajusta la altura al contenido */
+    padding-bottom: 50px; /* Añade espacio en la parte inferior */
 }
 
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Espacio entre los íconos */
-    flex-wrap: wrap; /* Para que los íconos se ajusten en pantallas pequeñas */
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .boton-red {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Tamaño fijo para los íconos */
+    width: 50px;
     height: 50px;
-    color: #A5CBC3; /* Color de los íconos */
+    color: #A5CBC3;
     text-decoration: none;
-    border-radius: 50%; /* Hace que los íconos sean circulares */
+    border-radius: 50%;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .boton-red i {
-    font-size: 40px; /* Tamaño de los íconos */
+    font-size: 40px;
 }
 
 .boton-red:hover {
-    color: #eea75b; /* Cambia el color al pasar el mouse */
-    transform: translateY(-3px); /* Efecto de levantar el ícono */
+    color: #eea75b;
+    transform: translateY(-3px);
     text-shadow: 0 0 5px rgba(239, 163, 82, 0.7);
 }
 
 .boton-red:active {
-    transform: translateY(0); /* Efecto al hacer clic */
+    transform: translateY(0);
 }
-

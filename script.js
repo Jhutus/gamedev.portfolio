@@ -4,7 +4,6 @@ document.querySelectorAll('nav a').forEach(anchor => {
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         
-        const offset = targetSection.offsetLeft;
-        document.querySelector('main').style.transform = `translateX(-${offset}px)`;
+        targetSection.scrollIntoView({ behavior: 'smooth' });
     });
 });
