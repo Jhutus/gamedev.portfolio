@@ -23,7 +23,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: 50px;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +66,7 @@ nav ul li a:hover {
 main {
     display: block; /* Cambia flex a block */
     width: 100%; /* Cambia 300vw a 100% */
-    margin-top: 50px; /* Ajusta el margen superior para el header fijo */
+    margin-top: 10vh; /* Ajusta el margen superior para el header fijo */
 }
 
 section {
@@ -85,7 +85,9 @@ a{
 
 /* Estilos para la sección "Sobre mí" */
 #about-me {
-    background-color: #100B00;    
+    background-color: #100B00;
+    min-height: 90vh;    
+    padding-top: 0;
 }
 
 .content {
@@ -124,7 +126,6 @@ a{
     height: auto; /* Ajusta la altura al contenido */
     max-width: 1200px; /* Limita el ancho máximo de la sección */
     margin: 0 auto; /* Centra la sección en la pantalla */
-    padding-bottom: 50px; /* Añade espacio en la parte inferior */
 }
 
 .grid-projects {
