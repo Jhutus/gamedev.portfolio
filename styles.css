@@ -109,10 +109,10 @@ a{
 
 .description {
     color: #EFFFC8;
-    font-size: 30.5px;
+    font-size: 24px;
     line-height: 1.5;
     margin: 0 10px;
-    text-align: center;
+    text-align: left;
     width: 100%;
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
 }
